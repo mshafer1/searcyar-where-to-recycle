@@ -38,48 +38,12 @@ title: Reproduce in your area"
 
 	<div class="w3-container">
 		<p>We can allow other towns or FLL teams to use sub-domain name. We can share the framwork, CSS, HTML and configuration scripts that make the site run.</p>		
-		<?php
-			//if(false)
-			if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST' and isset($_POST['town'],$_POST['state'], $_POST['email'], $_POST['ip']))
-			{
-				if(mail('mshafer1@harding.edu','Where To Recycle - Request for subdomain',
-				"
-				Requst from: $_POST[email]
-				Town: $_POST[town]
-				State: $_POST[state]
-				IP: $_POST[ip]"))
-				{
-					?> <h1>Succesfully submitted request</h1><?php
-				}
-				else
-				{
-					?> <h1>Error - please try again</h1>
-						<br/>
-						<input action="action" type="button" value="Back" onclick="history.go(-1);" />
-					<?php
-				}
-			}
-			else //must get GET
-			{
-				?>
-					<div class="w3-accordian">
-						<button onclick="myFunction('Form')" class="w3-btn-block">Click Here to request a subdomain name.</button>
-						<div id="Form" class="w3-accordion-content w3-container w3-animate-zoom">
-							<form method="post">
-								<p><label>Town: <input name="town" title="The name of the town to appear in the subdomain name" type="text" placeholder="Searcy" required/></label></p>
-								<p><label>State: <input name="state" title="The state this town is in" type="text" placeholder="AR" required/></label></p>
-								<p><label>Contact Email: <input name="email" title="Please provide a way to contact the site admin" type="email" placeholder="jdoe@gmail.com" required/></label></p>
-								<p><label>IP Address: <input name="ip" title="The IP address or url that the site is at" type="text" placeholder="192.168.1.1" required/></label></p>
-								<p><input type="submit"/></p>
-							</form>
-						</div>
-					</div>
-				<?php
-			}
-		
-		?>
-		
-				
+        <div class="w3-accordian">
+            <button onclick="myFunction('Form')" class="w3-btn-block">Click Here to request a subdomain name.</button>
+            <div id="Form" class="w3-accordion-content w3-container w3-animate-zoom">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWR8GYOsd6-VPsMfmqlz0wKTEo77MCtGV-Nznftyw7IA3Ogw/viewform?embedded=true" width="100%" style="max-width:900px;" height="1200" frameborder="0" marginheight="0" marginwidth="0" style="margin-left:auto; margin-right: auto;">Loading...</iframe>
+            </div>
+		</div>
 	</div>
 </div>
 
